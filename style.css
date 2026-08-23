@@ -1058,6 +1058,43 @@ blockquote {
   font-size: 15px;
 }
 
+/* =========================
+   FAQ
+========================= */
+#faq {
+  position: relative;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+#faq h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#faq .subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 50px;
+  font-size: 15px;
+}
+#faq .feature-card {
+  text-align: left;
+}
+#faq .feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+#faq .feature-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 /* ================= GRID ================= */
 .feature-grid {
   display: grid;
