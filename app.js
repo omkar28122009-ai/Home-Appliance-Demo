@@ -4,6 +4,10 @@ console.log("ULTRA LUXURY BACKGROUND LOADED");
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* ================= REDUCED MOTION / LOW-POWER GUARD ================= */
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isSmallScreen = window.innerWidth < 768;
+
   /* ================= CANVAS ================= */
   const canvas = document.createElement("canvas");
   canvas.id = "bgCanvas";
@@ -41,7 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }));
 
   /* ================= DRAW ================= */
+  const waveLines = isSmallScreen ? 7 : 14;
+  const wavePoints = isSmallScreen ? 40 : 80;
+  const depthLines = isSmallScreen ? 4 : 8;
+  const depthPoints = isSmallScreen ? 30 : 60;
+
   function draw(time) {
+
+    if (document.hidden) {
+      requestAnimationFrame(draw);
+      return;
+    }
 
     time *= 0.0004;
 
@@ -80,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===== WAVE MESH (MAIN EFFECT) ===== */
-    for (let j = 0; j < 14; j++) {
+    for (let j = 0; j < waveLines; j++) {
 
       ctx.beginPath();
 
-      for (let i = 0; i < 80; i++) {
+      for (let i = 0; i < wavePoints; i++) {
 
-        let x = (i / 80) * window.innerWidth;
+        let x = (i / wavePoints) * window.innerWidth;
 
         let y =
           window.innerHeight / 2 +
@@ -109,13 +123,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ===== DEPTH LAYER (BOTTOM WAVE) ===== */
-    for (let j = 0; j < 8; j++) {
+    for (let j = 0; j < depthLines; j++) {
 
       ctx.beginPath();
 
-      for (let i = 0; i < 60; i++) {
+      for (let i = 0; i < depthPoints; i++) {
 
-        let x = (i / 60) * window.innerWidth;
+        let x = (i / depthPoints) * window.innerWidth;
 
         let y =
           window.innerHeight -
@@ -130,7 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.stroke();
     }
 
-    requestAnimationFrame(draw);
+    if (!prefersReducedMotion) {
+      requestAnimationFrame(draw);
+    }
   }
 
   requestAnimationFrame(draw);
