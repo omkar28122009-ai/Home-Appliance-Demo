@@ -5,7 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ===== PRIMARY SEO ===== -->
 <title>Gas Geyser, Chimney & Hob Repair Service in Mumbai | Bageshwar Enterprises</title>
 
 <meta name="description" content="Same-day gas geyser, kitchen chimney & hob repair in Mumbai. ₹149 visit charge, expert technicians, all brands supported. Call now for fast service.">
@@ -16,16 +15,13 @@
 
 <meta name="author" content="Bageshwar Enterprises">
 
-<!-- ===== MOBILE OPTIMIZATION ===== -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- ===== LOCAL SEO (GEO TAGS) ===== -->
 <meta name="geo.region" content="IN-MH">
 <meta name="geo.placename" content="Mumbai">
 <meta name="geo.position" content="19.2183;72.9781">
 <meta name="ICBM" content="19.2183, 72.9781">
 
-<!-- ===== OPEN GRAPH (WHATSAPP / FACEBOOK) ===== -->
 <meta property="og:title" content="Gas Geyser, Chimney & Hob Repair Service in Mumbai">
 <meta property="og:description" content="Fast, affordable repair service in Mumbai. Same-day service, ₹149 visit charge, expert technicians.">
 <meta property="og:image" content="https://yourdomain.com/image/logo.png">
@@ -33,48 +29,238 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bageshwar Enterprises">
 
-<!-- ===== TWITTER ===== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gas Repair Service in Mumbai | Bageshwar Enterprises">
 <meta name="twitter:description" content="Expert chimney, gas geyser & hob repair. Same-day service in Mumbai.">
 <meta name="twitter:image" content="https://yourdomain.com/image/preview.jpg">
 
-<!-- ===== FAVICON (IMPORTANT FOR TRUST) ===== -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<!-- ===== PRECONNECT (SPEED BOOST) ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="./bg.css">
 <link rel="stylesheet" href="./style.css">
+
+<style>
+  /* --- Keyframe Definitions --- */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.08); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0.4; }
+  }
+
+  @keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* --- Navbar Scrolling Smoothness --- */
+  .navbar {
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  }
+
+  /* --- Immediate Entry Load Animations (Hero) --- */
+  .hero-content h1 {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-content p, 
+  .hero-content .highlight {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+  }
+
+  .hero-buttons {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+  }
+
+  .bg-glow, .glow {
+    animation: pulseGlow 7s infinite ease-in-out;
+  }
+
+  /* --- Scroll-Driven Engine Classes (Two-Way Capable) --- */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    /* Handles both entering and exiting smoothly */
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Target staggered delays for card grids */
+  .scroll-reveal.staggered {
+    transition-delay: calc(var(--stagger-index) * 100ms);
+  }
+
+  /* --- High-End Hover Micro-interactions --- */
+  .service-card, .feature-card, .review-card, .trust-bar div {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform, box-shadow;
+  }
+
+  .service-card:hover, .feature-card:hover, .review-card:hover {
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+  }
+
+  .trust-bar div:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Fluid image float logic */
+  .about-img img {
+    animation: floatEffect 5s infinite ease-in-out;
+  }
+
+  /* Button Hover Springs */
+  .hero-buttons button, .cta-btn, .btn, .footer-btn, .contact-card .btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                filter 0.25s ease, 
+                box-shadow 0.25s ease;
+  }
+
+  .hero-buttons button:hover, .cta-btn:hover, .btn:hover, .footer-btn:hover, .contact-card .btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .hero-buttons button:active, .cta-btn:active, .btn:active {
+    transform: scale(0.97);
+  }
+
+  /* Interactive Underlines for Navigation Links */
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  /* --- Floating Action Buttons (Bottom Right) --- */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseGlowBtn 2s infinite;
+}
+
+.float-btn.whatsapp-float {
+  background-color: #25d366;
+}
+
+.float-btn.call-float {
+  background-color: #007bff;
+  animation-delay: 1s; /* Staggered pulse effect */
+}
+
+/* Icon shake on hover */
+.float-btn:hover i {
+  animation: shakeIcon 0.5s ease-in-out;
+}
+
+.float-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Continuous Pulse Ring Animation */
+@keyframes pulseGlowBtn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Icon Shake Keyframe */
+@keyframes shakeIcon {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+</style>
 </head>
 
 <body>
   <div class="bg-glow"></div>
 <div class="noise"></div>
 
-<!-- NAVBAR -->
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
 
-  <!-- LOGO -->
-<div class="logo">
+  <div class="logo">
   <img src="image/Logo.png" alt="Bageshwar Enterprises Logo">
 </div>
 
-  <!-- HAMBURGER (MOBILE) -->
   <div class="menu-toggle" id="menu-toggle">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- NAV LINKS -->
   <ul class="nav-links" id="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
@@ -85,7 +271,7 @@
   </ul>
 
 </nav>
-<!-- HERO -->
+
 <section id="home" class="hero">
 
   <div class="glow"></div>
@@ -93,11 +279,8 @@
   <div class="hero-content">
     <h1>Gas Geyser, Kitchen Chimney & Hob Repair Service in Mumbai</h1>
 
-
-
     <p>
       Bageshwar Enterprises – Trusted Home Appliance Repair Experts
-      
     </p>
    <p class="highlight">
   <span><i class="fas fa-check-circle"></i> All Brands Supported</span>
@@ -105,28 +288,23 @@
   <span><i class="fas fa-check-circle"></i> Expert Technicians</span>
 </p>
     
-
     <div class="hero-buttons">
-      <a href="tel:+917039195288">
+      <a href="tel:+9929129911">
         <button>Call Now</button>
       </a>
 
-      <a href="https://wa.me/7039195288">
+      <a href="https://wa.me/9929129911">
         <button>WhatsApp</button>
-  
       </a>
       <p>
 Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in Mumbai.
 </p>
     </div>
     
-    
-    
   </div>
 
 </section>
 
-<!-- TRUST INFO -->
 <section class="trust-bar">
 
   <div>
@@ -155,7 +333,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
 </section>
 
-<!-- ABOUT WITH IMAGE -->
 <section id="about">
 
   <h2>About Our Service</h2>
@@ -166,12 +343,10 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
   <div class="about-container">
 
-    <!-- IMAGE -->
     <div class="about-img">
       <img src="image/about.png" alt="Chimney and Gas Repair Service">
     </div>
 
-    <!-- TEXT -->
     <div class="about-text">
 
       <p>
@@ -201,7 +376,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 
   <h2>Our Gas & Appliance Repair Services</h2>
@@ -209,109 +383,123 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
   <p class="subtitle">
     Reliable, safe, and fast repair services to keep your home appliances working perfectly.
   </p>
-  
 
   <div class="service-grid">
 
-    <!-- SERVICE 1 -->
     <div class="service-card">
-
       <span class="badge">Popular</span>
-
-      <img src="image/service 2.png" alt="Chimney Repair">
-
-      <h3><i class="fas fa-wind"></i> Chimney Repair Service</h3>
-      
-
+      <img src="https://d1msew97rp2nin.cloudfront.net/prodin/beyondapp/blogimages/how-to-choose-the-right-kitchen-chimney-size-shape-more-43b3c1df-73a3-40f1-a896-aa45c9078cd2.webp" alt="Kitchen Chimney Service">
+      <h3><i class="fas fa-wind"></i> Kitchen Chimney Service & Installation</h3>
       <p>
-        Professional kitchen chimney repair to maintain proper airflow and smoke removal.
+        Professional kitchen chimney repair, deep cleaning, and installation.
       </p>
-
       <p class="sub-text">
-        We provide deep cleaning and technical repair to improve suction and performance.
+        Maintain proper airflow, remove heavy smoke, and restore maximum suction power.
       </p>
-
       <ul>
+        <li>✔ Deep cleaning & unblocking</li>
         <li>✔ Motor repair & replacement</li>
-        <li>✔ Deep cleaning service</li>
-        <li>✔ Suction power fixing</li>
+        <li>✔ New chimney installation</li>
       </ul>
-       <div class="service-note-wrap">
-  <p class="service-note">
-    Out-of-Warranty Service | ₹149 Visiting Charge
-  </p>
-</div>
-     
-
+      <div class="service-note-wrap">
+        <p class="service-note">
+          Out-of-Warranty Service | ₹149 Visiting Charge
+        </p>
+      </div>
     </div>
-    
 
-    <!-- SERVICE 2 -->
     <div class="service-card">
-
       <span class="badge">Expert Service</span>
-
-      <img src="image/service 1.png" alt="Gas Geyser Repair">
-
-      <h3><i class="fas fa-hot-tub"></i> Gas Geyser Repair</h3>
-
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBDiNkQMtgBIAZtnEgGpNTmnMosEcfTgTbPJyty2WyPCsJSFbrIkhEdj4&s=10" alt="Gas Geyser Repair">
+      <h3><i class="fas fa-shower"></i> Gas Geyser Repair & Installation</h3>
       <p>
-        Quick and safe repair service for all types of gas geysers.
+        Quick and safe installation and repair for all types of gas geysers.
       </p>
-
       <p class="sub-text">
         Ensure consistent hot water supply with our expert maintenance and repair solutions.
       </p>
-
       <ul>
-        <li>✔ Ignition repair</li>
-        <li>✔ Gas leakage fixing</li>
-        <li>✔ Heating issue repair</li>
+        <li>✔ Ignition & burner repair</li>
+        <li>✔ Gas leakage detection & fixing</li>
+        <li>✔ Safe geyser installation</li>
       </ul>
-       <div class="service-note-wrap">
-  <p class="service-note">
-    Out-of-Warranty Service | ₹149 Visiting Charge
-  </p>
-</div>
-
+      <div class="service-note-wrap">
+        <p class="service-note">
+          Out-of-Warranty Service | ₹149 Visiting Charge
+        </p>
+      </div>
     </div>
 
-    <!-- SERVICE 3 -->
     <div class="service-card">
-
-      <span class="badge">Safe & Secure</span>
-
-      <img src="https://images.unsplash.com/photo-1728976224749-f50c07a48603" alt="Gas Repair">
-
-      <h3><i class="fas fa-fire"></i> Gas Repair Service</h3>
-      
-
+      <span class="badge">Trending</span>
+      <img src="https://web-res.midea.com/content/dam/midea-aem/in/india-assets-new/plp-page/built-in-hobs-bnner-pc.jpg/jcr:content/renditions/built-in-hobs-bnner-pc.webp" alt="Luxury Inbuilt Gas Hob">
+      <h3><i class="fas fa-fire"></i> Inbuilt Gas Hob Service & Installation</h3>
       <p>
-        Complete gas appliance repair with safety-first approach.
+        Specialized repair and installation service for integrated glass top gas hobs.
       </p>
-
       <p class="sub-text">
-        Our trained technicians ensure leak-free and efficient gas system performance.
+        Smooth flame regulation, auto-ignition fixing, and thorough burner cleanup.
       </p>
-
       <ul>
-        <li>✔ Gas leakage detection</li>
-        <li>✔ Pipe & regulator repair</li>
-        <li>✔ Safety inspection</li>
+        <li>✔ Auto-ignition spark repair</li>
+        <li>✔ Low flame & burner clearing</li>
+        <li>✔ Precision installation</li>
       </ul>
-       <div class="service-note-wrap">
-  <p class="service-note">
-    Out-of-Warranty Service | ₹149 Visiting Charge
-  </p>
-</div>
+      <div class="service-note-wrap">
+        <p class="service-note">
+          Out-of-Warranty Service | ₹149 Visiting Charge
+        </p>
+      </div>
+    </div>
 
+    <div class="service-card">
+      <span class="badge">Safe & Secure</span>
+      <img src="https://images.unsplash.com/photo-1627752711469-d98b8acfc05c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Kitchen Gas Pipeline Fitting">
+      <h3><i class="fas fa-tools"></i> Gas Pipeline Installation</h3>
+      <p>
+        Complete commercial and residential gas pipeline fitting with safety check.
+      </p>
+      <p class="sub-text">
+        Our trained technicians ensure leak-free, high-pressure, and secure gas piping.
+      </p>
+      <ul>
+        <li>✔ Copper/GI pipeline fitting</li>
+        <li>✔ Gas leakage testing & fixing</li>
+        <li>✔ Regulator & valve replacement</li>
+      </ul>
+      <div class="service-note-wrap">
+        <p class="service-note">
+          Out-of-Warranty Service | ₹149 Visiting Charge
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <span class="badge">Essential</span>
+      <img src="https://5.imimg.com/data5/SELLER/Default/2025/9/544785760/HS/DO/ZL/227999350/aqua-ro-uv-uf-water-purifier-500x500.jpg" alt="Modern Water Purifier Setup">
+      <h3><i class="fas fa-tint"></i> Water Purifier Service & Installation</h3>
+      <p>
+        Complete maintenance, filter replacement, and installation for RO/UV systems.
+      </p>
+      <p class="sub-text">
+        Get clean, healthy, and safe drinking water with complete purification care.
+      </p>
+      <ul>
+        <li>✔ Filter & membrane replacement</li>
+        <li>✔ Leakage & pump repair</li>
+        <li>✔ New RO/UV installation</li>
+      </ul>
+      <div class="service-note-wrap">
+        <p class="service-note">
+          Out-of-Warranty Service | ₹149 Visiting Charge
+        </p>
+      </div>
     </div>
 
   </div>
 
 </section>
 
-<!-- WHY US -->
 <section id="why">
 
   <h2>Why Choose Our Service</h2>
@@ -350,7 +538,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews">
 
   <h2>Customer Reviews</h2>
@@ -361,7 +548,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
   <div class="review-grid">
 
-    <!-- REVIEW 1 -->
     <div class="review-card">
       <span class="quote">“</span>
 
@@ -379,7 +565,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
       </div>
     </div>
 
-    <!-- REVIEW 2 -->
     <div class="review-card">
       <span class="quote">“</span>
 
@@ -397,7 +582,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
       </div>
     </div>
 
-    <!-- REVIEW 3 -->
     <div class="review-card">
       <span class="quote">“</span>
 
@@ -419,12 +603,10 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 
   <div class="contact-container">
 
-    <!-- LEFT CONTENT -->
     <div class="contact-info">
       <h2>Book Your Service Now</h2>
 
@@ -445,7 +627,7 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
         <div class="contact-item">
           <i class="fas fa-phone"></i>
-          <span>+917039195288</span>
+          <span>+91 98894 77039</span>
         </div>
 
         <div class="contact-item">
@@ -455,14 +637,13 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
       </div>
 
-      <!-- ACTION BUTTONS -->
       <div class="contact-actions">
 
-        <a href="tel:+917039195288" class="btn call-btn">
+        <a href="tel:+9889477039" class="btn call-btn">
           <i class="fas fa-phone"></i> Call Now
         </a>
 
-        <a href="https://wa.me/+917039195288" class="btn whatsapp-btn">
+        <a href="https://wa.me/7039195288" class="btn whatsapp-btn">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
 
@@ -470,7 +651,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
     </div>
 
-    <!-- RIGHT SIDE CARD -->
     <div class="contact-card">
 
       <h3>Quick Booking</h3>
@@ -483,7 +663,7 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
         <li>✔ Affordable pricing</li>
       </ul>
 
-      <a href="tel:+917039195288" class="btn full-btn">
+      <a href="tel:+7039195288" class="btn full-btn">
         Book Service Now
       </a>
 
@@ -493,12 +673,10 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
 
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
 
   <div class="footer-container">
 
-    <!-- BRAND -->
     <div class="footer-brand">
       <h3>GasFix Mumbai</h3>
       <p>
@@ -509,11 +687,10 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/+917039195288"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/7039195288"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
 
-    <!-- SERVICES -->
     <div class="footer-links">
       <h4>Services</h4>
       <a href="#">Gas Stove Repair</a>
@@ -522,7 +699,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
       <a href="#">Burner Repair</a>
     </div>
 
-    <!-- QUICK LINKS -->
     <div class="footer-links">
       <h4>Quick Links</h4>
       <a href="#home">Home</a>
@@ -531,38 +707,45 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
       <a href="#contact">Contact</a>
     </div>
 
-    <!-- CONTACT -->
     <div class="footer-contact">
       <h4>Contact</h4>
       <p><i class="fas fa-map-marker-alt"></i> B-10, Mahatma Fule Society, Kranti Nagar, Akruli Road, Kandivali East, Mumbai .</p>
-      <p><i class="fas fa-phone"></i>+91 70391 95288</p>
+      <p><i class="fas fa-phone"></i> +91 98894 77039 </p>
       <p><i class="fas fa-clock"></i> Open 24 Hours</p>
 
-      <a href="tel:+917039195288" class="footer-btn">
+      <a href="tel:+9889477039" class="footer-btn">
         <i class="fas fa-phone"></i> Call Now
       </a>
     </div>
 
   </div>
+  <!-- Floating Call and WhatsApp Buttons -->
+<div class="floating-buttons">
+  <a href="https://wa.me/919889477039" class="float-btn whatsapp-float" target="_blank" aria-label="WhatsApp Us">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+919889477039" class="float-btn call-float" aria-label="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+</div>
 
-  <!-- BOTTOM -->
   <div class="footer-bottom">
     <p>© 2026 Bageshwar Enterprises. All Rights Reserved.</p>
   </div>
 
 </footer>
+
 <script>
+  // --- 1. NAVBAR & MENU INTERACTION LOGIC ---
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav-links");
 
-  // TOGGLE MENU
   toggle.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent instant close
+    e.stopPropagation();
     toggle.classList.toggle("active");
     nav.classList.toggle("active");
   });
 
-  // CLICK ON NAV LINK → CLOSE MENU
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       toggle.classList.remove("active");
@@ -570,7 +753,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
     });
   });
 
-  // CLICK ANYWHERE OUTSIDE → CLOSE MENU
   document.addEventListener("click", (e) => {
     if (!nav.contains(e.target) && !toggle.contains(e.target)) {
       toggle.classList.remove("active");
@@ -578,7 +760,6 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
     }
   });
 
-  // OPTIONAL: ESC KEY CLOSE (premium feel)
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       toggle.classList.remove("active");
@@ -586,16 +767,66 @@ Serving Kandivali, Borivali, Malad, Goregaon, Andheri, and all nearby areas in M
     }
   });
 
-  // SCROLL CLOSE (very premium UX)
   window.addEventListener("scroll", () => {
     toggle.classList.remove("active");
     nav.classList.remove("active");
-  });
-
-  // NAVBAR SCROLL EFFECT
-  window.addEventListener("scroll", () => {
+    
     document.querySelector(".navbar")
       .classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+
+  // --- 2. TWO-WAY (REVERSE) SCROLL-REVEAL ENGINE ---
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select standalone titles and containers
+    const individualSelectors = [
+      '#about h2', '#about .subtitle', '.about-container', 
+      '#services h2', '#services .subtitle', 
+      '#why h2', '#why .subtitle', 
+      '#reviews h2', '#reviews .subtitle', 
+      '.contact-container'
+    ];
+    
+    document.querySelectorAll(individualSelectors.join(',')).forEach(el => {
+      el.classList.add('scroll-reveal');
+    });
+
+    // Select structural layout grids to apply staggered delays
+    const sequentialGrids = [
+      '.trust-bar', '.service-grid', '.feature-grid', '.review-grid'
+    ];
+    
+    document.querySelectorAll(sequentialGrids.join(',')).forEach(grid => {
+      Array.from(grid.children).forEach((child, index) => {
+        child.classList.add('scroll-reveal', 'staggered');
+        child.style.setProperty('--stagger-index', index);
+      });
+    });
+
+    // Intersection Observer Config
+    const revealSettings = {
+      root: null,
+      threshold: 0.05, 
+      rootMargin: "0px 0px -20px 0px" // Triggers slightly before element enters view
+    };
+
+    // The core two-way reveal logic
+    const viewportObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Slide and fade up when entering the window
+          entry.target.classList.add('reveal-active');
+        } else {
+          // REVERSE EFFECT: Automatically slide back down and hide when scrolling away
+          entry.target.classList.remove('reveal-active');
+        }
+      });
+    }, revealSettings);
+
+    // Bind all targeted tags to the live observer loop
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      viewportObserver.observe(el);
+    });
   });
 </script>
 
